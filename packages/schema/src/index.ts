@@ -1,2 +1,1 @@
-// microCMS Schema Definition and Validation Library
-export const version = "0.1.0";
+export { apiFieldSchema, apiSchema } from "./schema.js";

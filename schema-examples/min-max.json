@@ -189,12 +189,35 @@
       "fieldId": "select_max",
       "name": "セレクトフィールド 最大",
       "kind": "select",
+      "description": "説明文",
+      "required": true,
+      "selectItems": [
+        { "id": "nSvCqkxNsk", "value": "item1" },
+        { "id": "LMmv5JEb4A", "value": "item2" }
+      ],
+      "selectInitialValue": ["nSvCqkxNsk"],
+      "multipleSelect": false
+    },
+    {
+      "fieldId": "select_multi_min",
+      "name": "セレクトフィールド 最小",
+      "kind": "select",
+      "required": false,
+      "selectItems": [],
+      "selectInitialValue": [],
+      "multipleSelect": true
+    },
+    {
+      "fieldId": "select_multi_max",
+      "name": "セレクトフィールド 最大",
+      "kind": "select",
+      "description": "説明文",
       "required": true,
       "selectItems": [
         { "id": "viO1_AW73E", "value": "item1" },
         { "id": "6bnahbE--K", "value": "item2" }
       ],
-      "selectInitialValue": ["viO1_AW73E"],
+      "selectInitialValue": ["viO1_AW73E", "6bnahbE--K"],
       "multipleSelect": true
     },
     { "fieldId": "relation_min", "name": "参照 最小", "kind": "relation", "required": false },

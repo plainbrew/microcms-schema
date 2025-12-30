@@ -1,0 +1,332 @@
+{
+  "apiFields": [
+    { "fieldId": "text_min", "name": "テキストフィールド 最小", "kind": "text", "required": false },
+    {
+      "fieldId": "text_max",
+      "name": "テキストフィールド 最大",
+      "kind": "text",
+      "description": "説明文",
+      "required": true,
+      "selectItems": [],
+      "selectInitialValue": [],
+      "multipleSelect": false,
+      "textSizeLimitValidation": { "textSize": { "min": 1, "max": 30 } },
+      "patternMatchValidation": { "regexp": { "pattern": "\\d", "flags": "gi" } },
+      "isUnique": true
+    },
+    {
+      "fieldId": "textarea_min",
+      "name": "テキストエリア 最小",
+      "kind": "textArea",
+      "required": false
+    },
+    {
+      "fieldId": "textarea_max",
+      "name": "テキストエリア 最大",
+      "kind": "textArea",
+      "required": true,
+      "textSizeLimitValidation": { "textSize": { "min": 1, "max": 10 } },
+      "patternMatchValidation": { "regexp": { "pattern": "\\d", "flags": "gi" } }
+    },
+    {
+      "fieldId": "rich_min",
+      "name": "リッチエディタ 最小",
+      "kind": "richEditorV2",
+      "required": false
+    },
+    {
+      "fieldId": "rich_max",
+      "name": "リッチエディタ 最大",
+      "kind": "richEditorV2",
+      "description": "説明文",
+      "required": true,
+      "richEditorV2Options": [
+        "undo",
+        "redo",
+        "bold",
+        "italic",
+        "underline",
+        "code",
+        "listBullet",
+        "link",
+        "file",
+        "table",
+        "horizontalRule",
+        "textAlign",
+        "oembedly",
+        "clean",
+        "color",
+        "size",
+        "customClass",
+        "headerThree",
+        "headerFour",
+        "headerFive",
+        "paragraph",
+        "strike",
+        "blockquote",
+        "codeBlock",
+        "listOrdered",
+        "image",
+        "headerOne"
+      ],
+      "richEditorV2ColorList": [
+        { "id": "KDKsIv0jXZ", "value": "rgb(255, 255, 255)" },
+        { "id": "vHyfNOIY51", "value": "rgb(156, 102, 102)" },
+        { "id": "y1berGb1f3", "value": "rgb(180, 68, 68)" }
+      ],
+      "richEditorV2HideColorPicker": true,
+      "richEditorV2FontSizeList": [{ "id": "Sp9MppHN43", "name": "表示名", "value": "120" }],
+      "customClassList": [{ "id": "nL3_cmKOxf", "name": "表示名", "value": "class名" }]
+    },
+    {
+      "fieldId": "rich_ex_h1",
+      "name": "リッチエディタ h1以外",
+      "kind": "richEditorV2",
+      "required": true,
+      "richEditorV2Options": [
+        "headerThree",
+        "headerFour",
+        "headerFive",
+        "undo",
+        "redo",
+        "paragraph",
+        "bold",
+        "italic",
+        "underline",
+        "strike",
+        "code",
+        "blockquote",
+        "codeBlock",
+        "listBullet",
+        "listOrdered",
+        "link",
+        "image",
+        "file",
+        "table",
+        "horizontalRule",
+        "textAlign",
+        "customClass",
+        "oembedly",
+        "clean",
+        "color",
+        "size",
+        "headerTwo"
+      ]
+    },
+    { "fieldId": "image_min", "name": "画像 最小", "kind": "media", "required": false },
+    {
+      "fieldId": "image_max",
+      "name": "画像 最大",
+      "kind": "media",
+      "description": "説明文",
+      "required": true,
+      "imageSizeValidation": { "imageSize": { "width": 100, "height": 100 } }
+    },
+    {
+      "fieldId": "multi_image_min",
+      "name": "複数画像 最小",
+      "kind": "mediaList",
+      "required": false
+    },
+    {
+      "fieldId": "multi_image_max",
+      "name": "複数画像 最大",
+      "kind": "mediaList",
+      "description": "説明文",
+      "required": true,
+      "imageSizeValidation": { "imageSize": { "width": 100, "height": 100 } },
+      "mediaListLayout": "HORIZONTAL_SCROLL"
+    },
+    {
+      "fieldId": "multi_image_2column",
+      "name": "複数画像 2カラム",
+      "kind": "mediaList",
+      "required": false,
+      "mediaListLayout": "GRID_2"
+    },
+    {
+      "fieldId": "multi_image_3column",
+      "name": "複数画像 3カラム",
+      "kind": "mediaList",
+      "required": false,
+      "mediaListLayout": "GRID_3"
+    },
+    {
+      "fieldId": "multi_image_4column",
+      "name": "複数画像 4カラム",
+      "kind": "mediaList",
+      "required": false,
+      "mediaListLayout": "GRID_4"
+    },
+    { "fieldId": "date_min", "name": "日時 最小", "kind": "date", "required": false },
+    {
+      "fieldId": "date_max",
+      "name": "日時 最大",
+      "kind": "date",
+      "description": "説明文",
+      "required": true,
+      "dateFormat": true
+    },
+    { "fieldId": "bool_min", "name": "真偽値 最小", "kind": "boolean", "required": false },
+    {
+      "fieldId": "bool_max",
+      "name": "真偽値 最大",
+      "kind": "boolean",
+      "description": "説明文",
+      "required": true,
+      "booleanInitialValue": true
+    },
+    {
+      "fieldId": "select_min",
+      "name": "セレクトフィールド 最小",
+      "kind": "select",
+      "required": false,
+      "selectItems": [],
+      "selectInitialValue": [],
+      "multipleSelect": false
+    },
+    {
+      "fieldId": "select_max",
+      "name": "セレクトフィールド 最大",
+      "kind": "select",
+      "required": true,
+      "selectItems": [
+        { "id": "viO1_AW73E", "value": "item1" },
+        { "id": "6bnahbE--K", "value": "item2" }
+      ],
+      "selectInitialValue": ["viO1_AW73E"],
+      "multipleSelect": true
+    },
+    { "fieldId": "relation_min", "name": "参照 最小", "kind": "relation", "required": false },
+    {
+      "fieldId": "relation_max",
+      "name": "参照 最大",
+      "kind": "relation",
+      "description": "説明文",
+      "required": true,
+      "referenceDisplayItem": "eO9ST_qUoe"
+    },
+    {
+      "fieldId": "relation_multi_min",
+      "name": "複数参照 最小",
+      "kind": "relationList",
+      "required": false
+    },
+    {
+      "fieldId": "relation_multi_max",
+      "name": "複数参照 最大",
+      "kind": "relationList",
+      "description": "説明文",
+      "required": true,
+      "referenceDisplayItem": "eO9ST_qUoe",
+      "relationListCountLimitValidation": { "relationListCount": { "min": 1, "max": 3 } }
+    },
+    { "fieldId": "number_min", "name": "数字 最小", "kind": "number", "required": false },
+    {
+      "fieldId": "number_max",
+      "name": "数字 最大",
+      "kind": "number",
+      "description": "説明文",
+      "required": true,
+      "numberSizeLimitValidation": { "numberSize": { "min": 1, "max": 300 } }
+    },
+    {
+      "fieldId": "iframe_min",
+      "name": "拡張フィールド 最小",
+      "kind": "iframe",
+      "required": false,
+      "iframeUrl": "https://example.com"
+    },
+    {
+      "fieldId": "iframe_max",
+      "name": "拡張フィールド 最大",
+      "kind": "iframe",
+      "description": "説明文",
+      "required": true,
+      "iframeUrl": "https://example.com"
+    },
+    {
+      "fieldId": "rich_legacy_min",
+      "name": "旧リッチエディタ 最小",
+      "kind": "richEditor",
+      "required": false
+    },
+    {
+      "fieldId": "rich_legacy_max",
+      "name": "旧リッチエディタ 最大",
+      "kind": "richEditor",
+      "description": "説明文",
+      "required": true,
+      "richEditorImageSize": true,
+      "richEditorOptions": [
+        "headerThree",
+        "headerFour",
+        "headerFive",
+        "paragraph",
+        "sizeSmall",
+        "sizeNormal",
+        "sizeLarge",
+        "sizeHuge",
+        "bold",
+        "italic",
+        "underline",
+        "strike",
+        "code",
+        "background",
+        "color",
+        "align",
+        "blockquote",
+        "codeBlock",
+        "listOrdered",
+        "listBullet",
+        "indentRemove",
+        "indentAdd",
+        "scriptSub",
+        "scriptSuper",
+        "link",
+        "image",
+        "oembedly",
+        "clean",
+        "headerOne"
+      ]
+    },
+    {
+      "fieldId": "rich_legacy_ex_h1",
+      "name": "旧リッチエディタ h1以外",
+      "kind": "richEditor",
+      "required": false,
+      "richEditorOptions": [
+        "headerFour",
+        "headerFive",
+        "paragraph",
+        "sizeSmall",
+        "sizeNormal",
+        "sizeLarge",
+        "sizeHuge",
+        "bold",
+        "italic",
+        "underline",
+        "strike",
+        "code",
+        "background",
+        "color",
+        "align",
+        "blockquote",
+        "codeBlock",
+        "listOrdered",
+        "listBullet",
+        "indentRemove",
+        "indentAdd",
+        "scriptSub",
+        "scriptSuper",
+        "link",
+        "image",
+        "oembedly",
+        "clean",
+        "headerThree",
+        "headerTwo"
+      ]
+    }
+  ],
+  "customFields": []
+}

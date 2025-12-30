@@ -1,0 +1,1 @@
+{"apiFields":[{"fieldId":"image","name":"画像","kind":"media","required":true},{"fieldId":"url","name":"遷移先URL","kind":"text","required":true,"isUnique":false},{"fieldId":"description","name":"バナーの説明","kind":"textArea","required":false}],"customFields":[]}

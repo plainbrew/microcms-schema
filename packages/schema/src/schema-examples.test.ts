@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, test } from "vitest";
-import { apiSchema } from "./schema.js";
+import { apiSchemaSchema } from "./schema.js";
 
 const SCHEMA_EXAMPLES_DIR = join(__dirname, "../../../schema-examples");
 
@@ -11,7 +11,7 @@ describe("schema-examples のファイルをバリデーション", () => {
     const content = readFileSync(filePath, "utf-8");
     const schema = JSON.parse(content);
 
-    const result = apiSchema.safeParse(schema);
+    const result = apiSchemaSchema.safeParse(schema);
     if (!result.success) {
       console.error(result.error);
     }
@@ -23,7 +23,7 @@ describe("schema-examples のファイルをバリデーション", () => {
     const content = readFileSync(filePath, "utf-8");
     const schema = JSON.parse(content);
 
-    const result = apiSchema.safeParse(schema);
+    const result = apiSchemaSchema.safeParse(schema);
     if (!result.success) {
       console.error(result.error);
     }
@@ -35,7 +35,7 @@ describe("schema-examples のファイルをバリデーション", () => {
     const content = readFileSync(filePath, "utf-8");
     const schema = JSON.parse(content);
 
-    const result = apiSchema.safeParse(schema);
+    const result = apiSchemaSchema.safeParse(schema);
     if (!result.success) {
       console.error(result.error);
     }
@@ -47,7 +47,7 @@ describe("schema-examples のファイルをバリデーション", () => {
     const content = readFileSync(filePath, "utf-8");
     const schema = JSON.parse(content);
 
-    const result = apiSchema.safeParse(schema);
+    const result = apiSchemaSchema.safeParse(schema);
     if (!result.success) {
       console.error(result.error);
     }
@@ -59,7 +59,7 @@ describe("schema-examples のファイルをバリデーション", () => {
     const content = readFileSync(filePath, "utf-8");
     const schema = JSON.parse(content);
 
-    const result = apiSchema.safeParse(schema);
+    const result = apiSchemaSchema.safeParse(schema);
     if (!result.success) {
       console.error(result.error);
     }

@@ -1,1 +1,1 @@
-export { apiFieldSchema, apiSchema } from "./schema.js";
+export { apiSchemaSchema, ApiSchemaSchema } from "./schema.js";

@@ -223,7 +223,7 @@ const iframeFieldSchema = baseFieldSchema.extend({
   iframeUrl: z.string(),
 });
 
-export const apiFieldSchema = z.discriminatedUnion("kind", [
+const apiFieldSchema = z.discriminatedUnion("kind", [
   textFieldSchema,
   textAreaFieldSchema,
   richEditorFieldSchema,
@@ -239,9 +239,9 @@ export const apiFieldSchema = z.discriminatedUnion("kind", [
   iframeFieldSchema,
 ]);
 
-export const apiSchema = z.object({
+export const apiSchemaSchema = z.object({
   apiFields: z.array(apiFieldSchema),
   customFields: z.array(z.unknown()),
 });
 
-export type ApiSchema = z.infer<typeof apiSchema>;
+export type ApiSchemaSchema = z.infer<typeof apiSchemaSchema>;

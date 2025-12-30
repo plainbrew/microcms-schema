@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { apiSchema } from "./schema.js";
+import { apiSchemaSchema } from "./schema.js";
 
 describe("microCMSSchemaSchema", () => {
   test("official-categories.json のスキーマをバリデーションできる", () => {
@@ -16,7 +16,7 @@ describe("microCMSSchemaSchema", () => {
       customFields: [],
     };
 
-    const result = apiSchema.safeParse(schema);
+    const result = apiSchemaSchema.safeParse(schema);
     expect(result.success).toBe(true);
   });
 
@@ -46,7 +46,7 @@ describe("microCMSSchemaSchema", () => {
       customFields: [],
     };
 
-    const result = apiSchema.safeParse(schema);
+    const result = apiSchemaSchema.safeParse(schema);
     expect(result.success).toBe(true);
   });
 
@@ -82,7 +82,7 @@ describe("microCMSSchemaSchema", () => {
       customFields: [],
     };
 
-    const result = apiSchema.safeParse(schema);
+    const result = apiSchemaSchema.safeParse(schema);
     expect(result.success).toBe(true);
   });
 
@@ -160,7 +160,7 @@ describe("microCMSSchemaSchema", () => {
       customFields: [],
     };
 
-    const result = apiSchema.safeParse(schema);
+    const result = apiSchemaSchema.safeParse(schema);
     expect(result.success).toBe(true);
   });
 
@@ -177,7 +177,7 @@ describe("microCMSSchemaSchema", () => {
       customFields: [],
     };
 
-    const result = apiSchema.safeParse(invalidSchema);
+    const result = apiSchemaSchema.safeParse(invalidSchema);
     expect(result.success).toBe(false);
   });
 
@@ -194,7 +194,7 @@ describe("microCMSSchemaSchema", () => {
       customFields: [],
     };
 
-    const result = apiSchema.safeParse(invalidSchema);
+    const result = apiSchemaSchema.safeParse(invalidSchema);
     expect(result.success).toBe(false);
   });
 });

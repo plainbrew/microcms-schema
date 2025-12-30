@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  format-check:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,3 +24,6 @@ jobs:
 
       - name: Check format
         run: pnpm format --check
+
+      - name: Run tests
+        run: pnpm --filter microcms-api-schema-schema test run

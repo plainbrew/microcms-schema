@@ -35,6 +35,72 @@ const relationListCountLimitValidationSchema = z.object({
   }),
 });
 
+const richEditorOptionSchema = z.enum([
+  "headerOne",
+  "headerTwo",
+  "headerThree",
+  "headerFour",
+  "headerFive",
+  "paragraph",
+  "sizeSmall",
+  "sizeNormal",
+  "sizeLarge",
+  "sizeHuge",
+  "bold",
+  "italic",
+  "underline",
+  "strike",
+  "code",
+  "background",
+  "color",
+  "align",
+  "blockquote",
+  "codeBlock",
+  "listOrdered",
+  "listBullet",
+  "indentRemove",
+  "indentAdd",
+  "scriptSub",
+  "scriptSuper",
+  "link",
+  "image",
+  "oembedly",
+  "clean",
+]);
+
+const richEditorV2OptionSchema = z.enum([
+  "undo",
+  "redo",
+  "bold",
+  "italic",
+  "underline",
+  "strike",
+  "code",
+  "listBullet",
+  "listOrdered",
+  "link",
+  "file",
+  "image",
+  "table",
+  "horizontalRule",
+  "textAlign",
+  "oembedly",
+  "clean",
+  "color",
+  "size",
+  "customClass",
+  "headerOne",
+  "headerTwo",
+  "headerThree",
+  "headerFour",
+  "headerFive",
+  "paragraph",
+  "blockquote",
+  "codeBlock",
+]);
+
+const mediaListLayoutSchema = z.enum(["HORIZONTAL_SCROLL", "GRID_2", "GRID_3", "GRID_4"]);
+
 const selectItemSchema = z.object({
   id: z.string(),
   value: z.string(),
@@ -85,7 +151,7 @@ const textAreaFieldSchema = baseFieldSchema.extend({
 // リッチエディタ (richEditorV2)
 const richEditorV2FieldSchema = baseFieldSchema.extend({
   kind: z.literal("richEditorV2"),
-  richEditorV2Options: z.array(z.string()).optional(),
+  richEditorV2Options: z.array(richEditorV2OptionSchema).optional(),
   richEditorV2ColorList: z.array(richEditorV2ColorListItemSchema).optional(),
   richEditorV2HideColorPicker: z.boolean().optional(),
   richEditorV2FontSizeList: z.array(richEditorV2FontSizeListItemSchema).optional(),
@@ -96,7 +162,7 @@ const richEditorV2FieldSchema = baseFieldSchema.extend({
 const richEditorFieldSchema = baseFieldSchema.extend({
   kind: z.literal("richEditor"),
   richEditorImageSize: z.boolean().optional(),
-  richEditorOptions: z.array(z.string()).optional(),
+  richEditorOptions: z.array(richEditorOptionSchema).optional(),
 });
 
 // 画像 (media)
@@ -109,7 +175,7 @@ const mediaFieldSchema = baseFieldSchema.extend({
 const mediaListFieldSchema = baseFieldSchema.extend({
   kind: z.literal("mediaList"),
   imageSizeValidation: imageSizeValidationSchema.optional(),
-  mediaListLayout: z.string().optional(),
+  mediaListLayout: mediaListLayoutSchema.optional(),
 });
 
 // 日時 (date)

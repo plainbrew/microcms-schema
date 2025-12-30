@@ -11,6 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "oxfmt": "^0.21.0"
   },
   "packageManager": "pnpm@10.24.0"

@@ -1,4 +1,4 @@
-# @microcms-schema/schema
+# microcms-api-schema-schema
 
 microCMS のスキーマ定義とバリデーションライブラリ
 
@@ -9,7 +9,7 @@ microCMS のスキーマ定義とバリデーションライブラリ
 ## インストール
 
 ```bash
-pnpm add @microcms-schema/schema
+pnpm add microcms-api-schema-schema
 ```
 
 ## 開発

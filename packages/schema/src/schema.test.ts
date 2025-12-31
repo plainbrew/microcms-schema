@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
 import { apiSchemaSchema } from "./schema.js";
 
-describe("microCMSSchemaSchema", () => {
+describe("apiSchemaSchema", () => {
   test("official-categories.json のスキーマをバリデーションできる", () => {
     const schema = {
       apiFields: [

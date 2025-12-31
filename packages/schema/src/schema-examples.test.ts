@@ -9,57 +9,17 @@ const __dirname = dirname(__filename);
 
 const SCHEMA_EXAMPLES_DIR = join(__dirname, "../../../schema-examples");
 
+const schemaFiles = [
+  "official-categories.json",
+  "official-news.json",
+  "official-blogs.json",
+  "official-banner.json",
+  "min-max.json",
+];
+
 describe("schema-examples のファイルをバリデーション", () => {
-  test("official-categories.json", () => {
-    const filePath = join(SCHEMA_EXAMPLES_DIR, "official-categories.json");
-    const content = readFileSync(filePath, "utf-8");
-    const schema = JSON.parse(content);
-
-    const result = apiSchemaSchema.safeParse(schema);
-    if (!result.success) {
-      console.error(result.error);
-    }
-    expect(result.success).toBe(true);
-  });
-
-  test("official-news.json", () => {
-    const filePath = join(SCHEMA_EXAMPLES_DIR, "official-news.json");
-    const content = readFileSync(filePath, "utf-8");
-    const schema = JSON.parse(content);
-
-    const result = apiSchemaSchema.safeParse(schema);
-    if (!result.success) {
-      console.error(result.error);
-    }
-    expect(result.success).toBe(true);
-  });
-
-  test("official-blogs.json", () => {
-    const filePath = join(SCHEMA_EXAMPLES_DIR, "official-blogs.json");
-    const content = readFileSync(filePath, "utf-8");
-    const schema = JSON.parse(content);
-
-    const result = apiSchemaSchema.safeParse(schema);
-    if (!result.success) {
-      console.error(result.error);
-    }
-    expect(result.success).toBe(true);
-  });
-
-  test("official-banner.json", () => {
-    const filePath = join(SCHEMA_EXAMPLES_DIR, "official-banner.json");
-    const content = readFileSync(filePath, "utf-8");
-    const schema = JSON.parse(content);
-
-    const result = apiSchemaSchema.safeParse(schema);
-    if (!result.success) {
-      console.error(result.error);
-    }
-    expect(result.success).toBe(true);
-  });
-
-  test("min-max.json", () => {
-    const filePath = join(SCHEMA_EXAMPLES_DIR, "min-max.json");
+  test.each(schemaFiles)("%s", (filename) => {
+    const filePath = join(SCHEMA_EXAMPLES_DIR, filename);
     const content = readFileSync(filePath, "utf-8");
     const schema = JSON.parse(content);
 

@@ -1,7 +1,11 @@
 import { readFileSync } from "node:fs";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { describe, expect, test } from "vitest";
 import { apiSchemaSchema } from "./schema.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const SCHEMA_EXAMPLES_DIR = join(__dirname, "../../../schema-examples");
 

@@ -18,7 +18,7 @@ importers:
         specifier: ^0.21.0
         version: 0.21.0
 
-  packages/schema:
+  packages/microcms-api-schema-schema:
     dependencies:
       zod:
         specifier: ^4.2.1

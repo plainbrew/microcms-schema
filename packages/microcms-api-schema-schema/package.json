@@ -19,10 +19,11 @@
     "./schema.json": "./dist/schema.json"
   },
   "scripts": {
+    "dev": "tsc --watch",
     "build": "pnpm build:tsc && pnpm build:schema",
     "build:tsc": "tsc",
     "build:schema": "node scripts/generate-json-schema.ts",
-    "dev": "tsc --watch",
+    "type-check": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
   },

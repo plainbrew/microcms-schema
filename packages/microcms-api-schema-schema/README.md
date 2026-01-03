@@ -1,10 +1,10 @@
 # microcms-api-schema-schema
 
-microCMS のスキーマ定義とバリデーションライブラリ
+microCMS の API スキーマを定義するためのスキーマライブラリ
 
 ## 概要
 
-このパッケージは、microCMS のスキーマを TypeScript で型安全に定義し、Zod によるランタイムバリデーションを提供します。
+このパッケージは、microCMS の API スキーマを TypeScript で型安全に定義し、Zod によるランタイムバリデーションを提供します。
 
 ## インストール
 

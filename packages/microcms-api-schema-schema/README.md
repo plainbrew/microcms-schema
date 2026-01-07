@@ -9,7 +9,8 @@ microCMS の API スキーマを定義するためのスキーマライブラリ
 ## インストール
 
 ```bash
-pnpm add @plainbrew/microcms-api-schema-schema
+npm add -D @plainbrew/microcms-api-schema-schema
+pnpm add -D @plainbrew/microcms-api-schema-schema
 ```
 
 ## 使い方

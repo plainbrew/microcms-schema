@@ -18,6 +18,8 @@ importers:
         specifier: ^0.23.0
         version: 0.23.0
 
+  packages/microcms-api-schema-schema: {}
+
 packages:
 
   '@oxfmt/darwin-arm64@0.23.0':

@@ -1,0 +1,9 @@
+{
+  "name": "@plainbrew/microcms-api-schema-schema",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

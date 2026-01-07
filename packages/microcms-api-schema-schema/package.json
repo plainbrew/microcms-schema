@@ -1,9 +1,49 @@
 {
   "name": "@plainbrew/microcms-api-schema-schema",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "description": "",
   "license": "MIT",
+  "files": [
+    "dist",
+    "schema.json",
+    "src"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./schema.json": "./schema.json"
+  },
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "pnpm build:tsc && pnpm build:schema",
+    "build:tsc": "tsc",
+    "build:schema": "node scripts/generate-json-schema.ts",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.4",
+    "typescript": "^5.7.3",
+    "vitest": "^4.0.16",
+    "zod": "^4.2.1"
+  },
+  "peerDependencies": {
+    "zod": "^3.25.0 || ^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "zod": {
+      "optional": true
+    }
   }
 }

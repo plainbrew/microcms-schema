@@ -53,21 +53,21 @@ pnpm add @plainbrew/microcms-api-schema-schema
 
 ### サポートされるフィールドタイプ
 
-| kind           | 説明                     |
-| -------------- | ------------------------ |
-| `text`         | テキストフィールド       |
-| `textArea`     | テキストエリア           |
-| `richEditor`   | リッチエディタ（従来版） |
-| `richEditorV2` | リッチエディタ（V2）     |
-| `media`        | 画像                     |
-| `mediaList`    | 画像リスト               |
-| `date`         | 日付                     |
-| `boolean`      | ブーリアン               |
-| `select`       | セレクトフィールド       |
-| `number`       | 数値                     |
-| `relation`     | コンテンツ参照           |
-| `relationList` | 複数コンテンツ参照       |
-| `iframe`       | 拡張フィールド           |
+| kind           | 説明               |
+| -------------- | ------------------ |
+| `text`         | テキストフィールド |
+| `textArea`     | テキストエリア     |
+| `richEditorV2` | リッチエディタ     |
+| `richEditor`   | 旧リッチエディタ   |
+| `media`        | 画像               |
+| `mediaList`    | 複数画像           |
+| `date`         | 日時               |
+| `boolean`      | 真偽値             |
+| `select`       | セレクトフィールド |
+| `number`       | 数字               |
+| `relation`     | コンテンツ参照     |
+| `relationList` | 複数コンテンツ参照 |
+| `iframe`       | 拡張フィールド     |
 
 ## 開発
 

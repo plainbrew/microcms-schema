@@ -29,7 +29,8 @@
     "build:schema": "node scripts/generate-json-schema.ts",
     "type-check": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "prepare": "pnpm run build"
   },
   "devDependencies": {
     "@types/node": "^24.10.4",

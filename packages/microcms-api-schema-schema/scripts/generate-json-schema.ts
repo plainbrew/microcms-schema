@@ -5,7 +5,7 @@ import { z } from "zod";
 import { apiSchemaSchema } from "../src/schema.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const distDir = join(__dirname, "../dist");
+const distDir = join(__dirname, "../");
 
 mkdirSync(distDir, { recursive: true });
 

@@ -1,11 +1,11 @@
 {
   "name": "@plainbrew/microcms-api-schema-schema",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/plainbrew/microcms-api-schema.git",
+    "url": "git+https://github.com/plainbrew/microcms-schema.git",
     "directory": "packages/microcms-api-schema-schema"
   },
   "files": [

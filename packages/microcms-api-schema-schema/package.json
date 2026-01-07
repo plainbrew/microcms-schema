@@ -19,6 +19,9 @@
     },
     "./schema.json": "./schema.json"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "tsc --watch",
     "build": "pnpm build:tsc && pnpm build:schema",

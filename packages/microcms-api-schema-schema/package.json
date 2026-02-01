@@ -40,7 +40,7 @@
   "devDependencies": {
     "@types/node": "^24.10.9",
     "typescript": "^5.7.3",
-    "vitest": "^4.0.16",
+    "vitest": "^4.0.18",
     "zod": "^4.3.6"
   },
   "peerDependencies": {
